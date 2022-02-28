@@ -93,7 +93,7 @@ def run(api_base_url, github_access_token, repository_name):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-a', '--api-base-url', type=str, help='The BASE URL of Airbyte API',
-                        default='http://localhost:8000/api')
+                        default='http://airbyte-webapp/api')
     parser.add_argument('-g', '--github-access-token', type=str, help='The Personal Access Token of Github', required=True)
     parser.add_argument('-r', '--repository-name', type=str, required=True,
                         help='Space-delimited list of GitHub organizations/repositories, e.g. `airbytehq/airbyte` for single repository,'

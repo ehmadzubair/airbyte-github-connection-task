@@ -203,6 +203,12 @@ services:
       - '5432:5432'
     volumes:
       - postgres-destination-data:/var/lib/postgresql/data
+  custom_script_runner:
+    build:
+      context: ./custom_scripts
+    command: tail -F anything
+    volumes:
+      - ./custom_scripts:/usr/app/src
 volumes:
   postgres-destination-data:
   workspace:

@@ -32,42 +32,11 @@ docker-compose up
 
 Now visit [http://localhost:8000](http://localhost:8000)
 
-Here is a [step-by-step guide](https://github.com/airbytehq/airbyte/tree/e378d40236b6a34e1c1cb481c8952735ec687d88/docs/quickstart/getting-started.md) showing you how to load data from an API into a file, all on your computer.
-
-## Features
-
-* **Built for extensibility**: Adapt an existing connector to your needs or build a new one with ease.
-* **Optional normalized schemas**: Entirely customizable, start with raw data or from some suggestion of normalized data.
-* **Full-grade scheduler**: Automate your replications with the frequency you need.
-* **Real-time monitoring**: We log all errors in full detail to help you understand.
-* **Incremental updates**: Automated replications are based on incremental updates to reduce your data transfer costs.
-* **Manual full refresh**: Sometimes, you need to re-sync all your data to start again.
-* **Debugging autonomy**: Modify and debug pipelines as you see fit, without waiting.
-
-[See more on our website.](https://airbyte.io/features/)
-
-## Contributing
-
-We love contributions to Airbyte, big or small.
-
-See our [Contributing guide](docs/contributing-to-airbyte/) on how to get started. Not sure where to start? We’ve listed some [good first issues](https://github.com/airbytehq/airbyte/labels/good%20first%20issue) to start with. If you have any questions, please open a draft PR or visit our [slack channel](https://github.com/airbytehq/airbyte/tree/a9b1c6c0420550ad5069aca66c295223e0d05e27/slack.airbyte.io) where the core team can help answer your questions.
-
-**Note that you are able to create connectors using the language you want, as Airbyte connections run as Docker containers.**
-
-**Also, we will never ask you to maintain your connector. The goal is that the Airbyte team and the community helps maintain it, let's call it crowdsourced maintenance!**
-
-## Community support
-
-For general help using Airbyte, please refer to the official Airbyte documentation. For additional help, you can use one of these channels to ask a question:
-
-* [Slack](https://slack.airbyte.io) \(For live discussion with the Community and Airbyte team\)
-* [GitHub](https://github.com/airbytehq/airbyte) \(Bug reports, Contributions\)
-* [Twitter](https://twitter.com/airbytehq) \(Get the news fast\)
-* [Weekly office hours](https://airbyte.io/weekly-office-hours/) \(Live informal 30-minute video call sessions with the Airbyte team\)
-
-## Roadmap
-
-Check out our [roadmap](docs/project-overview/roadmap.md) to get informed on what we are currently working on, and what we have in mind for the next weeks, months and years.
+# Run Github Connection Script
+Run the following command to set up 
+```
+docker compose exec custom_script_runner python github_connection.py -g <your_github_personal_access_token> -r <github_repository_name>
+```
 
 ## License
 

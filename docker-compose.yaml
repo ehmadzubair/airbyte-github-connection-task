@@ -193,7 +193,18 @@ services:
       - POSTGRES_USER=${DATABASE_USER}
     volumes:
       - ./temporal/dynamicconfig:/etc/temporal/config/dynamicconfig
+  postgres-destination:
+    image: postgres:14.2
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres-destination-data:/var/lib/postgresql/data
 volumes:
+  postgres-destination-data:
   workspace:
     name: ${WORKSPACE_DOCKER_MOUNT}
   # the data volume is only needed for backward compatibility; when users upgrade

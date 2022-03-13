@@ -6128,6 +6128,10 @@
           type: "string"
           title: "Access Token"
           description: "The end-user's Link access token."
+        access_token_2:
+          type: "string"
+          title: "Access Token 2"
+          description: "The end-user's Link access token."
         api_key:
           title: "API Key"
           type: "string"
